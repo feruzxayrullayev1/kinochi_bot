@@ -123,11 +123,13 @@ async def process_code(message: Message, bot: Bot):
         return
 
     # Videoni yuborish
+        # Videoni yuborish
     try:
         await bot.send_video(
             chat_id=message.chat.id,
             video=file_id,
-            caption=caption or f"🎬 Kod: {code}"
+            caption=caption or f"🎬 Kod: {code}",
+            protect_content=True          # ← shu qo‘shildi
         )
         await increment_video_view(code)
     except Exception as e:
