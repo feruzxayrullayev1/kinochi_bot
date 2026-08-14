@@ -1,5 +1,10 @@
-BOT_TOKEN = "8679639881:AAGKRCoVFcVV2xvLXE5_QZUbVVCO2i-fnWo"
-ADMIN_IDS = [5467496016]          # O'zingizning ID
+import os
+
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
+if not BOT_TOKEN:
+    raise ValueError("BOT_TOKEN topilmadi!")
+
+ADMIN_IDS = [5467496016]          # O'zingizning Telegram ID
 
 # Premium narxlari
 PREMIUM_PRICES = {
@@ -8,5 +13,5 @@ PREMIUM_PRICES = {
     3: 70000    # 3 oy
 }
 
-# To'lov kanali (majburiy emas). Masalan: https://t.me/+xxxx yoki @tolov_kanal
+# To'lov kanali
 PAYMENT_CHANNEL = "https://t.me/MyWorkshub"
