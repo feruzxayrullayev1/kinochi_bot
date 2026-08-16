@@ -14,4 +14,4 @@ PREMIUM_PRICES = {
 }
 
 # To'lov kanali
-PAYMENT_bot = "https://t.me/Admimessage_bot
+PAYMENT_CHANELL = "https://t.me/MyWorkshub
